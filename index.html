@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Recebendo Keyboards</title>
+</head>
+<body>
+    
+    <div id="box"></div>
+
+    <script>
+
+        let boxTop = 200;
+        let boxLeft = 200;
+
+        'use strict';
+        
+        document.addEventListener('keydown', (event) => {
+          const keyName = event.key;
+          if (keyName === 'ArrowDown'){
+            boxTop += 10
+          }
+          if (keyName === 'ArrowUp'){
+            boxTop -= 10
+          }
+          if (keyName === 'ArrowLeft'){
+            boxLeft -= 10
+          }
+          if (keyName === 'ArrowRight'){
+            boxLeft += 10
+          }
+
+          document.getElementById("box").style.top = boxTop + "px";
+          document.getElementById("box").style.left = boxLeft + "px";
+        });
+
+        
+
+        
+    </script>
+</body>
+</html>
